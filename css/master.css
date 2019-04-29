@@ -4,8 +4,38 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.otf");
+}
+
+@font-face {
+  font-family: Allcan;
+  src: url("../fonts/Allcan.otf");
+}
+
+@font-face {
+  font-family: NationalPark;
+  src: url("../fonts/national-park-regular.otf");
+}
+
+@font-face {
+  font-family: Scratchy;
+  src: url('../fonts/perfectly-scratchy.ttf');
+}
+
+@font-face {
+  font-family: Spectrum;
+  src: url('../fonts/crayon.ttf');
+}
+
+@font-face {
+    font-family: Atreya;
+    src: url('../fonts/raidercrusader.ttf');
+}
+
 body{
-  font-family: Segoe UI;
+  font-family: Montserrat;
   padding:0;
   margin:0;
 }
@@ -17,6 +47,11 @@ section{
 
 h1{
   font-variant: small-caps;
+  font-family: Allcan;
+}
+
+h2{
+  font-family: Allcan;
 }
 
 .nav{
@@ -39,6 +74,7 @@ h1{
   display: flex;
   justify-content: flex-start;
   flex-grow: 100;
+  font-family: Georgia;
   color: white;
   padding: 20px;
   border: none;
@@ -48,16 +84,15 @@ h1{
 }
 
 .nav h2{
+  position: relative;
   display: none;
-  cursor: pointer;
-  position: absolute;
-  left: 20px;
-  top: 0px;
-  transform: translateY(-50%);
+  justify-content: flex-start;
+  flex-grow: 100;
+  font-family: Georgia;
   color: white;
   padding: 20px;
   border: none;
-  font-size: 25px;
+  font-size: 30px;
   float: left;
   transition-duration: 0.4s;
 }
@@ -84,7 +119,7 @@ h1{
 
 .nav a{
   display: flex;
-  font-family: Impact;
+  font-family: NationalPark;
   position: relative;
   padding: 10px 30px;
   text-decoration: none;
@@ -111,6 +146,7 @@ h1{
 .landing{
   position: relative;
   display: flex;
+  font-family: NationalPark;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -118,6 +154,7 @@ h1{
   background-size: cover;
   background-blend-mode: overlay;
   background-position: center;
+  background-attachment: fixed;
   color: white;
 }
 
@@ -134,16 +171,22 @@ h1{
   text-decoration: none;
   text-transform: uppercase;
   color: white;
-  background: #00994d;
+  background: #3333cc;
   height: 100%;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: normal;
   justify-content: center;
   align-items: center;
   transition-duration: 0.2s;
   animation: enter-bottom 2s ease-out forwards;
   margin: 10px;
-  border: 2px solid #00994d;
+  border: 2px solid #3333cc;
+}
+
+@media only screen and (max-width: 1080px){
+  .landing .row{
+    flex-direction: column;
+  }
 }
 
 @keyframes enter-bottom {
@@ -166,7 +209,7 @@ h1{
 }
 
 .landing a:active{
-  background-color: #004d26;
+  background-color: #1f1f7a;
   border: 2px solid black;
   box-shadow: 0 0 20px rgba(0,0,0,0.5) inset;
 }
@@ -180,6 +223,7 @@ h1{
   margin: 30px;
   position: relative;
   font-size: 30px;
+  text-align: center;
   animation-name: heading-anim;
   animation-timing-function: ease;
   animation-duration: 2s;
@@ -236,7 +280,7 @@ h1{
   font-weight: normal;
   font-size: 25px;
   padding: 5px 10px;
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid #cc0099;
 }
 
 .about .quote{
@@ -336,12 +380,111 @@ h1{
   width: 100%;
 }
 
+.event-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 70px 10% 30px 10%;
+}
+
+.blue-bg{
+  background: url('../images/net-bg.jpg');
+  color: white;
+}
+
+.blue-bg h1{
+  font-family: Atreya;
+}
+
+.spectrum-bg{
+  background: url('../images/spectrum-bg.jpg');
+  color: orange;
+}
+
+
+.spectrum-bg h1{
+  font-family: Spectrum;
+  font-variant: normal;
+}
+
+.genius-bg{
+  background: url('../images/genius-bg.jpg');
+  color: white;
+}
+
+.genius-bg h1{
+  font-family: Scratchy;
+}
+
+.event-section .row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  background: #ddd;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  align-items: center;
+}
+
+.event-section .row img{
+  position: relative;
+  display: flex;
+  width: 40%;
+  align-self: center;
+}
+
+p{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-self: stretch;
+  flex-grow: 100;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #444;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+}
+
+.event-section h1{
+  border: none;
+  font-size: 45px;
+}
+
+@media only screen and (max-width: 1080px) {
+  .event-section .row img{
+    display: none;
+  }
+
+  .event-section{
+      background-position: center;
+  }
+
+  .event-section .row{
+    flex-grow: 100;
+  }
+
+  .atreya{
+    color: white;
+    background: url("../images/events/atreya.jpeg"), rgba(0,0,0,0.6);
+      background-size: cover;
+      background-position: center;
+  }
+}
+
 .team{
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 70px 20px 20px 20px;
-  background: #444;
+  background: #1f272d;
   background-size: cover;
   background-blend-mode: overlay;
   color: #eee;
@@ -370,6 +513,12 @@ h1{
 .row .image-card{
   flex: 0 0 12%;
   margin: 20px 50px;
+}
+
+@media only screen and (max-width: 1080px){
+  .row .image-card{
+    flex: 0 0 40%;
+  }
 }
 
 .events{
@@ -432,6 +581,7 @@ h1{
   cursor: pointer;
   display: flex;
   position: absolute;
+  font-family: NationalPark;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -580,6 +730,25 @@ h1{
   flex: 1 1 0;
 }
 
+.border-right{
+  border-right: 1px solid lightgrey;
+}
+
+@media only screen and (max-width: 1080px){
+  .contact .row{
+    flex-direction: column;
+  }
+  .contact .col{
+    flex: 100 0 0;
+    border: none;
+  }
+
+  .border-right{
+    border: none;
+    border-right: none;
+  }
+}
+
 .contact h2{
   text-transform: uppercase;
   font-weight: bold;
@@ -677,12 +846,6 @@ footer .col h2{
   padding: 10px 0;
   font-size: 25px;
   border-bottom: 2px solid #555;
-}
-
-@media only screen and (max-width: 1080px){
-  .row .image-card{
-    flex: 0 0 60%;
-  }
 }
 
 @keyframes enter-left {
