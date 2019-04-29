@@ -723,6 +723,16 @@ p{
   flex: 1 1 0;
 }
 
+@media only screen and (max-width: 1080px){
+  .contact .row{
+    flex-direction: column;
+  }
+  .contact .col{
+    flex: 100 0 0;
+    border: none;
+  }
+}
+
 .contact h2{
   text-transform: uppercase;
   font-weight: bold;
