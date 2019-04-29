@@ -353,6 +353,12 @@ h1{
 }
 
 @media only screen and (max-width: 1080px) {
+  .left{
+    width: 100%;
+  }
+  .right{
+    width: 100%;
+  }
   .left .container{
     background: url(../images/mission.jpg), rgba(0,0,0,0.7);
   }
@@ -365,6 +371,13 @@ h1{
     background-blend-mode: overlay;
     background-position: center;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  .about{
+    padding: 60px 10px 10px 10px;
+  }
+  .about .quote{
+    text-align: justify;
+    width: 100%;
   }
   .about h2{
     color: white;
@@ -494,6 +507,7 @@ p{
 
   .event-section{
       background-position: center;
+      padding: 60px 5% 20px 5%;
   }
 
   .event-section .row{
