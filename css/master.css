@@ -92,7 +92,7 @@ h2{
   color: white;
   padding: 20px;
   border: none;
-  font-size: 30px;
+  font-size: 20px;
   float: left;
   transition-duration: 0.4s;
 }
@@ -170,6 +170,7 @@ h2{
 @media only screen and (max-width: 1080px){
   .nav{
     background: black;
+    font-size: 20px;
   }
   .nav h1{
     display: none;
@@ -182,6 +183,7 @@ h2{
   }
   .nav a{
     height: 50px;
+    font-size: 20px;
     background-color: black;
   }
   .nav .menu-btn{
