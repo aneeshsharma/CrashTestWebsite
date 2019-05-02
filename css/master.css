@@ -562,8 +562,8 @@ p{
   background: rgba(0,0,0,0.5);
   height: 100%;
   top: 0;
-  width: 40px;
-  font-size: 30px;
+  width: 25px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   color: white;
@@ -605,12 +605,20 @@ p{
 .row .image-card .caption{
   background: white;
   margin: 0;
+  font-size: 25px;
+  flex-wrap: wrap;
+  flex-grow: 0;
   color: grey;
 }
 
 @media only screen and (max-width: 1080px){
   .row .image-card{
-    flex: 0 0 20%;
+    flex: 0 0 30%;
+    margin: 10px 5px;
+  }
+
+  .row .image-card .caption{
+    font-size: 18px;
   }
 }
 
