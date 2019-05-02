@@ -524,6 +524,19 @@ p{
     background: url("../images/events/atreya.jpeg"), rgba(0,0,0,0.6);
       background-size: cover;
       background-position: center;
+
+  }
+  .spectrum{
+    color: white;
+    background: url("../images/events/spectrum.jpg"), rgba(0,0,0,0.6);
+      background-size: cover;
+      background-position: center;
+  }
+  .jeenius{
+    color: white;
+    background: url("../images/events/jeenius.jpg"), rgba(0,0,0,0.6);
+      background-size: cover;
+      background-position: center;
   }
 }
 
