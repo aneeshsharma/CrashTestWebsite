@@ -163,38 +163,67 @@
 
     <section id="team" class="team">
       <h1>Team</h1>
-      <div class="row" id="teamrow">
-        <div class="image-card wow fadeInUp">
+
+      <button class="right-button" onclick="shiftSlideForward()">&#10095;</button>
+      <button class="left-button" onclick="shiftSlideBackward()">&#10094;</button>
+
+      <div class="row" name="row1" id="teamrow">
+        <div class="image-card">
           <img src="images/placeholder.jpg">
-          <div class="caption">Name</div>
+          <div class="caption">Name1</div>
         </div>
-        <div class="image-card wow fadeInUp">
+
+        <div class="image-card">
           <img src="images/placeholder.jpg">
-          <div class="caption">Name</div>
+          <div class="caption">Name2</div>
         </div>
-          <div class="image-card wow fadeInUp">
+      </div>
+
+      <div class="row" name="row1" style="display: flex;" id="teamrow">
+        <div class="image-card">
           <img src="images/placeholder.jpg">
-          <div class="caption">Name</div>
+          <div class="caption">Name3</div>
         </div>
-          <div class="image-card wow fadeInUp">
+
+        <div class="image-card">
           <img src="images/placeholder.jpg">
-          <div class="caption">Name</div>
+          <div class="caption">Name4</div>
         </div>
-          <div class="image-card wow fadeInUp">
+      </div>
+
+      <div class="row" name="row2" style="display: flex;" id="teamrow">
+        <div class="image-card">
           <img src="images/placeholder.jpg">
-          <div class="caption">Name</div>
+          <div class="caption">Name1</div>
         </div>
-          <div class="image-card wow fadeInUp">
+
+        <div class="image-card">
           <img src="images/placeholder.jpg">
-          <div class="caption">Name</div>
+          <div class="caption">Name2</div>
         </div>
-          <div class="image-card wow fadeInUp">
+      </div>
+
+      <div class="row" name="row2" id="teamrow">
+        <div class="image-card">
           <img src="images/placeholder.jpg">
-          <div class="caption">Name</div>
+          <div class="caption">Name3</div>
         </div>
-          <div class="image-card wow fadeInUp">
+
+        <div class="image-card">
           <img src="images/placeholder.jpg">
-          <div class="caption">Name</div>
+          <div class="caption">Name4</div>
+        </div>
+      </div>
+
+      <div class="row" name="row2" id="teamrow">
+        <div class="image-card">
+          <img src="images/placeholder.jpg">
+          <div class="caption">Name5</div>
+        </div>
+
+        <div class="image-card">
+          <img src="images/placeholder.jpg">
+          <div class="caption">Name6s</div>
         </div>
       </div>
     </section>
@@ -261,13 +290,16 @@
     $(document).ready(function(){
     $(this).scrollTop(0);
 
+    //setInterval(nextSlide, 4000, "row1");
+    //setTimeout(function(){ setInterval(prevSlide, 4000, "row2"); }, 1500);
+
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
      // Make sure this.hash has a value before overriding default behavior
      if (this.hash !== "") {
        // Prevent default anchor click behavior
        event.preventDefault();
-
+       hide('mobilemenu');
        // Store hash
        var hash = this.hash;
 
@@ -301,6 +333,61 @@
       else if(getComputedStyle(elem, null).display === "flex"){
         elem.style.display = "none";
       }
+    }
+
+    function shiftSlideForward(){
+      nextSlide("row1");
+      nextSlide("row2");
+    }
+
+    function shiftSlideBackward(){
+      prevSlide("row1");
+      prevSlide("row2");
+    }
+
+    function nextSlide(name){
+      rows = document.getElementsByName(name);
+      noOfRows = rows.length;
+      currIndex = 0;
+
+      for(i=0;i<noOfRows;i++){
+        if(rows[i].style.display === "flex"){
+          currIndex = i;
+        }
+      }
+      rows[currIndex].style.display = "none";
+
+      currIndex++;
+      if(currIndex>=noOfRows){
+        currIndex = 0;
+      }
+
+      rows[currIndex].style.display = "flex";
+    }
+
+    function prevSlide(name){
+      rows = document.getElementsByName(name);
+      noOfRows = rows.length;
+      currIndex = 0;
+
+      for(i=0;i<noOfRows;i++){
+        if(rows[i].style.display === "flex"){
+          currIndex = i;
+        }
+      }
+      rows[currIndex].style.display = "none";
+
+      currIndex--;
+      if(currIndex<0){
+        currIndex = noOfRows - 1;
+      }
+
+      rows[currIndex].style.display = "flex";
+    }
+
+    function hideElement(index, name){
+      rows = document.getElementsByName(name);
+      rows[index].style.display = "none";
     }
 
     $(window).scroll(function(){

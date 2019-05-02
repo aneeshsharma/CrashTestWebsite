@@ -536,7 +536,7 @@ p{
 }
 
 .team img{
-  border-radius: 100%;
+  margin-bottom: 0;
 }
 
 .team h1{
@@ -546,21 +546,71 @@ p{
 }
 
 .team .row{
-  display: flex;
+  display: none;
+  position: relative;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  animation: fade-in 0.5s;
+}
+
+.team .right-button, .team .left-button{
+  display: flex;
+  position: absolute;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  top: 0;
+  width: 40px;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.team .right-button{
+  right: 0;
+}
+
+.team .left-button{
+  left: 0;
+}
+
+.left-button:hover, .right-button:hover{
+  background: rgba(100, 100, 100, 0.5);
+}
+
+.left-button:active, .right-button:active{
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+@keyframes slide-left{
+  from{
+    left: -100%;
+  }
+  to{
+    left: 0;
+  }
 }
 
 .row .image-card{
-  flex: 0 0 12%;
-  margin: 20px 50px;
+  flex: 0 0 20%;
+  margin: 20px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.row .image-card .caption{
+  background: white;
+  margin: 0;
+  color: grey;
 }
 
 @media only screen and (max-width: 1080px){
   .row .image-card{
-    flex: 0 0 40%;
+    flex: 0 0 20%;
   }
 }
 
