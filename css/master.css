@@ -884,6 +884,10 @@ p{
   border-right: 1px solid lightgrey;
 }
 
+.border-right-blue{
+  border-right: 1px solid #003;
+}
+
 @media only screen and (max-width: 1080px){
   .contact .row{
     flex-direction: column;
