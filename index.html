@@ -274,6 +274,21 @@
 
       <div class="row" name="row1" id="teamrow">
         <div class="image-card">
+          <img src="images/team/jointsec-mugesh.jpg">
+          <div class="brief">Joint Secretary</div>
+          <div class="caption">Mugesh</div>
+        </div>
+
+        <div class="image-card">
+          <img src="images/team/jointsec-yashaswini.jpg">
+          <div class="brief">Joint Secretary</div>
+          <div class="caption">Yashaswini</div>
+        </div>
+      </div>
+
+
+      <div class="row" name="row1" id="teamrow">
+        <div class="image-card">
           <img src="images/team/treasurer-ayush.jpg">
           <div class="brief">Treasurer</div>
           <div class="caption">Ayush</div>
@@ -288,15 +303,43 @@
 
       <div class="row" name="row1" id="teamrow">
         <div class="image-card">
+          <img src="images/team/eventco-vivek.jpg">
+          <div class="brief">Event Co-ordinator</div>
+          <div class="caption">Vivek</div>
+        </div>
+
+        <div class="image-card">
+          <img src="images/team/eventco-anu.jpg">
+          <div class="brief">Event Co-ordinator</div>
+          <div class="caption">Anu</div>
+        </div>
+      </div>
+
+      <div class="row" name="row1" id="teamrow">
+        <div class="image-card">
           <img src="images/team/designer-edwin.jpg">
           <div class="brief">Designer</div>
-          <div class="caption">Edwin</div>
+          <div class="caption">Edvin</div>
         </div>
 
         <div class="image-card">
           <img src="images/team/webdesign-mehil.jpg">
           <div class="brief">Web Design</div>
           <div class="caption">Mehil</div>
+        </div>
+      </div>
+
+      <div class="row" name="row1" id="teamrow">
+        <div class="image-card">
+          <img src="images/team/creativehead-jahnvi.jpg">
+          <div class="brief">Creative Head</div>
+          <div class="caption">Jahnvi</div>
+        </div>
+
+        <div class="image-card">
+          <img src="images/team/creativehead-aditi.jpg">
+          <div class="brief">Creative Head</div>
+          <div class="caption">Aditi</div>
         </div>
       </div>
 
@@ -314,51 +357,7 @@
         </div>
       </div>
 
-      <!-- Row 2 -->
-
-      <div class="row" name="row2" style="display: flex;" id="teamrow">
-        <div class="image-card">
-          <img src="images/team/jointsec-mugesh.jpg">
-          <div class="brief">Joint Secretary</div>
-          <div class="caption">Mugesh</div>
-        </div>
-
-        <div class="image-card">
-          <img src="images/team/jointsec-yashaswini.jpg">
-          <div class="brief">Joint Secretary</div>
-          <div class="caption">Yashaswini</div>
-        </div>
-      </div>
-
-      <div class="row" name="row2" id="teamrow">
-        <div class="image-card">
-          <img src="images/team/eventco-vivek.jpg">
-          <div class="brief">Event Co-ordinator</div>
-          <div class="caption">Vivek</div>
-        </div>
-
-        <div class="image-card">
-          <img src="images/team/eventco-anu.jpg">
-          <div class="brief">Event Co-ordinator</div>
-          <div class="caption">Anu</div>
-        </div>
-      </div>
-
-      <div class="row" name="row2" id="teamrow">
-        <div class="image-card">
-          <img src="images/team/creativehead-jahnvi.jpg">
-          <div class="brief">Creative Head</div>
-          <div class="caption">Jahnvi</div>
-        </div>
-
-        <div class="image-card">
-          <img src="images/team/creativehead-aditi.jpg">
-          <div class="brief">Creative Head</div>
-          <div class="caption">Aditi</div>
-        </div>
-      </div>
-
-      <div class="row" name="row2" id="teamrow">
+      <div class="row" name="row1" id="teamrow">
         <div class="image-card">
           <img src="images/team/eah-johan.jpg">
           <div class="brief">External Affairs</div>
@@ -435,8 +434,7 @@
     $(document).ready(function(){
     $(this).scrollTop(0);
 
-    //setInterval(nextSlide, 4000, "row1");
-    //setTimeout(function(){ setInterval(prevSlide, 4000, "row2"); }, 1500);
+    setInterval(nextSlide, 4000, "row1");
 
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
@@ -482,12 +480,12 @@
 
     function shiftSlideForward(){
       nextSlide("row1");
-      nextSlide("row2");
+      nextSlide("row1");
     }
 
     function shiftSlideBackward(){
       prevSlide("row1");
-      prevSlide("row2");
+      prevSlide("row1");
     }
 
     function nextSlide(name){

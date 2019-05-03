@@ -571,6 +571,7 @@ p{
   justify-content: center;
   flex-wrap: wrap;
   animation: fade-in 0.5s;
+  width: 80%;
 }
 
 .team .right-button, .team .left-button{
@@ -616,7 +617,7 @@ p{
 }
 
 .row .image-card{
-  flex: 0 0 40%;
+  flex: 0 0 25%;
   margin: 20px 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
@@ -667,7 +668,7 @@ p{
 
 @media only screen and (max-width: 1080px){
   .row .image-card{
-    flex: 0 0 30%;
+    flex: 0 0 80%;
     margin: 10px 5px;
   }
 
