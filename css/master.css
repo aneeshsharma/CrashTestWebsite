@@ -127,7 +127,7 @@ h1{
   text-transform: uppercase;
   color: white;
   height: 100%;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: lighter;
   justify-content: center;
   align-items: center;
@@ -160,7 +160,7 @@ h1{
   }
   .nav a{
     height: 50px;
-    font-size: 20px;
+    font-size: 18px;
     background-color: black;
   }
   .nav .menu-btn{
