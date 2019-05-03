@@ -635,8 +635,7 @@ p{
   transition-duration: 0.3s;
 }
 
-/*
-.image-card .brief{
+.image-card .layover{
   cursor: pointer;
   position: absolute;
   display: flex;
@@ -644,6 +643,8 @@ p{
   left: 0;
   z-index: 30;
   opacity: 0;
+  height: 100%;
+  width: 100%;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -651,9 +652,8 @@ p{
   color: white;
   transition-duration: 0.3s;
 }
-*/
 
-.image-card .brief:hover{
+.image-card .layover:hover{
   opacity: 1;
 }
 
@@ -777,13 +777,20 @@ p{
   color: #444;
   flex-direction: column;
   width: 60%;
-  height: 80%;
+  height: 50%;
   border: none;
   padding: 30px;
   box-shadow: 0 0 10px rgba(0,0,0,0.7);
   animation: grow 0.5s ease forwards;
   text-align: justify;
   overflow-y: scroll;
+}
+
+.pop-up .row{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .details-container.exit{
@@ -814,8 +821,14 @@ p{
   right: 20px;
 }
 
+.pop-up p{
+  padding: 10px;
+  flex-grow: 100;
+}
+
 .pop-up img{
   position: relative;
+  display: flex;
   width: 50%;
   margin: 0;
 }
@@ -847,12 +860,17 @@ p{
     width: 100%;
   }
 
+  .pop-up .row{
+    flex-direction: column;
+  }
+
   .events{
     height: 450vh;
   }
 
   .details-container .pop-up{
     width: 100%;
+    height: 80%;
     height: calc(100%-100px);
   }
 }
@@ -979,7 +997,7 @@ footer .row{
   flex-direction: row;
 }
 
-footer a{
+.social{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -994,11 +1012,11 @@ footer a{
   margin: 10px;
 }
 
-footer a:hover{
+.social:hover{
   background-color: #444;
 }
 
-footer a:active{
+.social:active{
   background-color: #335;
 }
 
