@@ -11,7 +11,7 @@
   </head>
   <body>
     <form method="get" action="brochure.pdf">
-      <button type="submit" class="brochure"><i class="fas fa-book"></i></button>
+      <button type="submit" onmouseover="stop_bounce()" class="brochure"><i class="fas fa-book"></i></button>
     </form>
     <div class="nav">
       <h1>ISTE NITC STUDENTS' CHAPTER</h1>
@@ -501,6 +501,10 @@
 
     function show(id){
       document.getElementById(id).style.display = "flex";
+    }
+
+    function stop_bounce(){
+      document.getElementsByClassName("brochure")[0].classList.add("no-animation");
     }
 
     function hide(id){
