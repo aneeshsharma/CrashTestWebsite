@@ -10,6 +10,9 @@
     <title>ISTE NITC STUDENTS' CHAPTER</title>
   </head>
   <body>
+    <form method="get" action="brochure.pdf">
+      <button type="submit" class="brochure"><i class="fas fa-book"></i></button>
+    </form>
     <div class="nav">
       <h1>ISTE NITC STUDENTS' CHAPTER</h1>
       <h2>ISTE NITC</h2>
@@ -419,7 +422,8 @@
           <i class="fas fa-phone"></i>
           <h2>PHONE</h2>
           <div>
-            +91 89437 08295
+              +91 99611 33071,
+              +91 89437 08295
           </div>
         </div>
         <div class="col wow fadeInDown">
@@ -445,7 +449,7 @@
         National Institute Of Technology, Calicut<br>
         Kattangal, Kozikode<br>
         Kerala 673601<br>
-        Phone:+91 89437 08295<br>
+        Phone:+91-99611-33071, +91-89437-08295<br>
         Email: iste-nitc@nitc.ac.in<br>
         <div class="row">
           <a href="https://www.facebook.com/istenitc/" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -467,7 +471,8 @@
     $(document).ready(function(){
     $(this).scrollTop(0);
 
-    setInterval(nextSlide, 4000, "row1");
+    // Set the inerval for slide change
+    setInterval(nextSlide, 7000, "row1");
 
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
