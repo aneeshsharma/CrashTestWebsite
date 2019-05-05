@@ -464,6 +464,8 @@ h1{
 
 .blue-bg{
   background: url('../images/net-bg.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
 }
 
@@ -473,6 +475,8 @@ h1{
 
 .spectrum-bg{
   background: url('../images/spectrum-bg.jpg');
+  background-size: cover;
+  background-position: center;
   color: orange;
 }
 
@@ -484,6 +488,8 @@ h1{
 
 .genius-bg{
   background: url('../images/genius-bg.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
 }
 
